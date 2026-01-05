@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Products } from './components/Products';
-import { TechnicalSpecs } from './components/TechnicalSpecs';
-import { Cases } from './components/Cases';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar.tsx';
+import { Hero } from './components/Hero.tsx';
+import { About } from './components/About.tsx';
+import { Products } from './components/Products.tsx';
+import { TechnicalSpecs } from './components/TechnicalSpecs.tsx';
+import { Cases } from './components/Cases.tsx';
+import { Contact } from './components/Contact.tsx';
+import { Footer } from './components/Footer.tsx';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
