@@ -21,13 +21,13 @@ export const Cases: React.FC<{ id: string }> = ({ id }) => {
       title: '上海生物能源再利用中心二期三期',
       desc: '废气处理系统，解决复杂臭味及有机物组分治理难题。',
       category: '废气处理',
-      image: 'https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=800&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop'
     },
     {
       title: '上海松江湿垃圾资源化处理厂一期二期',
       desc: '采用陶粒悬浮球构建组合式生物净化系统，稳定达标。',
       category: '废气处理',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=800&auto=format&fit=crop'
     },
     {
       title: '河北故城县农村生活污水治理工程配套',
@@ -43,15 +43,15 @@ export const Cases: React.FC<{ id: string }> = ({ id }) => {
     },
     {
       title: '洛阳石化新建含盐污水处理厂项目',
-      desc: '针对高盐污水设计的专项生物处理系统。',
+      desc: '针对高盐污水设计的专项生物处理系统，采用高性能陶粒载体。',
       category: '工业废水',
-      image: 'https://images.unsplash.com/photo-1451187534963-11d954109761?q=80&w=800&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=800&auto=format&fit=crop'
     },
     {
       title: '上海嘉定湿垃圾资源化处理厂一期二期',
-      desc: '核心恶臭指标硫化氢去除率大于 99%。',
+      desc: '核心恶臭指标硫化氢去除率显著，长期稳定运行。',
       category: '废气处理',
-      image: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=800&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=800&auto=format&fit=crop'
     }
   ];
 

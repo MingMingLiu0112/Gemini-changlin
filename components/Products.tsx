@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ProductCardProps {
@@ -40,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, description, features,
 );
 
 export const Products: React.FC<{ id: string }> = ({ id }) => {
-  const products = [
+  const mainProducts = [
     {
       title: '陶粒悬浮球',
       description: '净水除臭、革新之选。构建高密度微生物生态，引领污水处理新效能。',
@@ -50,7 +49,7 @@ export const Products: React.FC<{ id: string }> = ({ id }) => {
         '卓越的脱氮除磷效率，硝化速率高出40%',
         '生物承载力实现飞跃式提升'
       ],
-      image: 'https://picsum.photos/seed/ball1/600/400',
+      image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=800&auto=format&fit=crop',
       isSpecial: true
     },
     {
@@ -62,7 +61,7 @@ export const Products: React.FC<{ id: string }> = ({ id }) => {
         '稳定高效运行，保障复杂工况下的稳定性',
         '耐腐蚀、寿命长，易于安装维护'
       ],
-      image: 'https://picsum.photos/seed/ball2/600/400'
+      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop'
     },
     {
       title: '高效能活性炭',
@@ -73,7 +72,7 @@ export const Products: React.FC<{ id: string }> = ({ id }) => {
         '靶向定制生产：针对特定污染物调控孔径',
         '专为工业VOCs治理与溶剂回收定制'
       ],
-      image: 'https://picsum.photos/seed/carbon/600/400'
+      image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6ad?q=80&w=800&auto=format&fit=crop'
     },
     {
       title: '鲍尔环 & 多面空心球',
@@ -84,11 +83,18 @@ export const Products: React.FC<{ id: string }> = ({ id }) => {
         '优异的抗堵塞性，液体分布均匀',
         '专为大风量、低能耗工况优化'
       ],
-      image: 'https://picsum.photos/seed/rings/600/400'
+      image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800&auto=format&fit=crop'
     }
   ];
 
-  const fillers = ["陶粒", "聚氨酯海绵", "生物绳", "弹性填料", "MBBR", "火山岩"];
+  const galleryItems = [
+    { name: "聚氨酯海绵填料", img: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=300&h=300&auto=format&fit=crop" },
+    { name: "生物绳", img: "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=300&h=300&auto=format&fit=crop" },
+    { name: "弹性填料", img: "https://images.unsplash.com/photo-1451187534963-11d954109761?q=80&w=300&h=300&auto=format&fit=crop" },
+    { name: "MBBR载体", img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=300&h=300&auto=format&fit=crop" },
+    { name: "火山岩填料", img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=300&h=300&auto=format&fit=crop" },
+    { name: "斜管蜂窝填料", img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=300&h=300&auto=format&fit=crop" },
+  ];
 
   return (
     <section id={id} className="py-24 bg-slate-50">
@@ -101,20 +107,37 @@ export const Products: React.FC<{ id: string }> = ({ id }) => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((p, i) => <ProductCard key={i} {...p} />)}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+          {mainProducts.map((p, i) => <ProductCard key={i} {...p} />)}
         </div>
 
-        <div className="mt-20 p-12 bg-white rounded-[3rem] shadow-sm border border-gray-100 text-center">
-          <h3 className="text-2xl font-bold text-slate-900 mb-8">更多常用填料 (可组合、可定制)</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {fillers.map((f, i) => (
-              <span key={i} className="px-8 py-3 bg-green-50 text-green-700 rounded-full font-medium hover:bg-green-600 hover:text-white transition-all cursor-default">
-                {f}
+        {/* 宣传册图集展示部分 */}
+        <div className="mt-20 p-12 bg-white rounded-[3rem] shadow-sm border border-gray-100">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-slate-900">产品实拍画廊</h3>
+            <p className="text-gray-500 mt-2">源自宣传册的一手实拍图片，展示我们多样化的填料解决方案</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {galleryItems.map((item, i) => (
+              <div key={i} className="group cursor-pointer">
+                <div className="relative aspect-square overflow-hidden rounded-2xl mb-3">
+                  <img src={item.img} alt={item.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+                <p className="text-center text-sm font-medium text-slate-700 group-hover:text-green-600 transition-colors">{item.name}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
+            {["陶粒", "组合填料", "微孔曝气器", "收水器", "除雾器"].map((tag, i) => (
+              <span key={i} className="px-5 py-2 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-100">
+                # {tag}
               </span>
             ))}
           </div>
-          <p className="mt-8 text-gray-400 text-sm italic">* 图片展示均为常用填料，可根据具体工况提供定制化方案</p>
+          <p className="mt-8 text-center text-gray-400 text-xs italic">* 以上为公司常用生产规格，可根据客户工程需求进行特殊模具开发与定制。</p>
         </div>
       </div>
     </section>
