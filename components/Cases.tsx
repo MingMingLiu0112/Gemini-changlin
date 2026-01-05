@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const CaseItem: React.FC<{ title: string; desc: string; category: string; image: string }> = ({ title, desc, category, image }) => (
@@ -50,7 +49,7 @@ export const Cases: React.FC<{ id: string }> = ({ id }) => {
     },
     {
       title: '上海嘉定湿垃圾资源化处理厂一期二期',
-      desc: '核心恶臭指标硫化氢去除率 {" > "} 99%。',
+      desc: '核心恶臭指标硫化氢去除率大于 99%。',
       category: '废气处理',
       image: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=800&auto=format&fit=crop'
     }
@@ -78,11 +77,11 @@ export const Cases: React.FC<{ id: string }> = ({ id }) => {
         
         <div className="mt-20 p-12 bg-white rounded-3xl border border-gray-100 grid md:grid-cols-3 gap-8 text-center">
            <div>
-             <div className="text-4xl font-bold text-green-600 mb-2">{" > 99%"}</div>
+             <div className="text-4xl font-bold text-green-600 mb-2">&gt; 99%</div>
              <div className="text-sm text-gray-500 font-medium">H2S 去除率</div>
            </div>
            <div className="border-x border-gray-100">
-             <div className="text-4xl font-bold text-green-600 mb-2">{" > 95%"}</div>
+             <div className="text-4xl font-bold text-green-600 mb-2">&gt; 95%</div>
              <div className="text-sm text-gray-500 font-medium">NH3 去除率</div>
            </div>
            <div>
