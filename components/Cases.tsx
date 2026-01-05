@@ -78,11 +78,11 @@ export const Cases: React.FC<{ id: string }> = ({ id }) => {
         
         <div className="mt-20 p-12 bg-white rounded-3xl border border-gray-100 grid md:grid-cols-3 gap-8 text-center">
            <div>
-             <div className="text-4xl font-bold text-green-600 mb-2">> 99%</div>
+             <div className="text-4xl font-bold text-green-600 mb-2">{"> 99%"}</div>
              <div className="text-sm text-gray-500 font-medium">H2S 去除率</div>
            </div>
            <div className="border-x border-gray-100">
-             <div className="text-4xl font-bold text-green-600 mb-2">> 95%</div>
+             <div className="text-4xl font-bold text-green-600 mb-2">{"> 95%"}</div>
              <div className="text-sm text-gray-500 font-medium">NH3 去除率</div>
            </div>
            <div>
